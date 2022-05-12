@@ -1,6 +1,6 @@
 .faqs {
   margin: 0 auto;
-  padding: 5rem;
+  padding: 1rem;
   text-align: center;
   }
 h3 {
@@ -71,8 +71,8 @@ h3 {
 .accordion a.active::after {
   font-family: 'Ionicons';
   content: '\f209';
-  color: #ff5353;
-  border: 1px solid #ff5353;
+  color: #ffb34f;
+  border: 1px solid #ffb34f;
 }
 .accordion .content {
   opacity: 0;

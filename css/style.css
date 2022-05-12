@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #EB1616;
+    --primary: #f6daa6;
     --secondary: #191C24;
     --light: #6C7293;
     --dark: #000000;
@@ -55,7 +55,7 @@
     /*font-size: 100px;*/
     /*letter-spacing:-2px;*/
     color: #fff;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ffb34f, 0 0 20px #ffb34f, 0 0 25px #ffb34f;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 5px #ffb34f, 0 0 20px #0000, 0 0 25px #ffb34f;
     -webkit-text-fill-color: #ffb34f;
     -webkit-text-stroke-color: #ffb34f;
     -webkit-text-stroke-width: 0.2px;
@@ -170,7 +170,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, .6);
+    background: rgba(0, 0, 0, .3);
     z-index: 1;
 }
 
