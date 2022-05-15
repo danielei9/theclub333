@@ -55,7 +55,7 @@ async function getAccount() {
 }
 
 // Pay Button
-function transaction() {
+function transaction() { 
     //Sending Ethereum to an address
     sendEthButton.addEventListener('click', () => {
         ethereum
