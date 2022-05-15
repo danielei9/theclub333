@@ -7,6 +7,32 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    <style>
+        @font-face {
+            font-family: MontLight;
+            src: url('./fonts/Mont-ExtraLightDEMO.otf');
+        }
+
+        @font-face {
+            font-family: MontHeavy;
+            src: url('./fonts/Mont-HeavyDEMO.otf');
+        }
+
+        * {
+            font-family: MontLight !important;
+            font-weight: 900 !important;
+        }
+
+        @media only screen and (min-width: 600px) {
+            .divMint:hover {
+                opacity: 1 !important;
+            }
+
+            .divMint {
+                opacity: 0.5 !important;
+            }
+        }
+    </style>
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -14,11 +40,13 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Oswald:wght@600&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -35,105 +63,137 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
     <!-- Spinner End -->
 
-
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-secondary navbar-dark sticky-top py-lg-0 px-lg-4 wow fadeIn" style="height: 70px;"data-wow-delay="0.1s">
+    <nav class="navbar navbar-expand-lg bg-secondary navbar-dark sticky-top py-lg-0 px-lg-4 wow fadeIn"
+        style="backdrop-filter: blur(10px);background:rgba(0,0,0,0.5) !important; height: 110px;" data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-            <h1 class="mb-0 text-primary text-uppercase"></i>THE CLUB 333</h1>
+            <img src="./img/logo2.png" height="60" alt="">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse" style="/*background: #191C24;*/text-align: center;">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="#" class="nav-item nav-link">About</a>
-                <a href="#" class="nav-item nav-link">Service</a>
-                <a href="#" class="nav-item nav-link">Contact</a>
+                <a href="#home" class="nav-item nav-link active neon">Home</a>
+                <a href="#about" class="nav-item nav-link">Info</a>
+                <a href="#gallery" class="nav-item nav-link">Galery</a>
+                <a href="#service" class="nav-item nav-link">Service</a>
+                <a href="#service" class="nav-item nav-link">Mint</a>
+                <a href="#roadmap" class="nav-item nav-link">Roadmap</a>
+                <a href="#faq" class="nav-item nav-link">FAQ</a>
+                <a href="#team" class="nav-item nav-link">Team</a>
             </div>
-            <a href="" class="btn btn-primary rounded-0 py-2 px-lg-4 d-none d-lg-block">Connect MetaMask<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="#" id="connMetamask"
+                style="color: darkslategray;border:0px;background-color:rgb(221, 220, 220);box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f6daa6, 0 0 25px #f6daa6;"
+                class="btn btn-primary rounded-0 py-2 px-lg-4 d-none d-lg-block">Connect
+                MetaMask <i class="fab fa-ethereum"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
 
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div id="home" class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.15s">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="https://wallup.net/wp-content/uploads/2019/09/07/1028593-fiesta-baile-ocio-discoteca.jpg" alt="Image">
+                <div class="carousel-item ">
+                    <img class="w-100" src="./img/Sivila1.jpg" alt="Image" style="max-height:55rem">
                     <div class="carousel-caption d-flex align-items-center justify-content-center text-start">
                         <div class="mx-sm-5 px-5" style="max-width: 900px;">
-                            <h1 class="display-2 text-white text-uppercase mb-4 animated slideInDown">Just DO IT for you</h1>
+                            <!--img class="" src="./img/theclub333.png" alt="Image"-->
+
+                            <h1 class="display-2 text-uppercase mb-4 animated slideInDown neon "
+                                style="  animation-delay: 0.3s;animation-name: fadeInUp;text-align: center;">FIESTAS PRIVADAS EN VILLAS.</h1>
                             <!--h4 class="text-white text-uppercase mb-4 animated slideInDown"><i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street, New York, USA</h4>
                             <h4 class="text-white text-uppercase mb-4 animated slideInDown"><i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890</h4-->
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLesCOs-E2t4jiLpgWDyrHMUOV7_WfMifmaI1TtKu5Fysz_3fv4SpKEJvtWAgkZAnGz6k&usqp=CAU" alt="Image">
+                    <img class="w-100" style="max-height:55rem" src="./img/conferencia1.jpg" alt="Image">
                     <div class="carousel-caption d-flex align-items-center justify-content-center text-start">
                         <div class="mx-sm-5 px-5" style="max-width: 900px;">
-                            <h1 class="display-2 text-white text-uppercase mb-4 animated slideInDown">Luxury Party at Affordable Price</h1>
+                            <h1 class="display-2  text-uppercase mb-4 animated slideInDown neon"
+                                style="  animation-delay: 0.3s;animation-name: fadeInUp;font-family: MontHeavy;text-align: center;">CONFERENCIAS DE ACCESO PRIVADO</h1>
+                            <!--h4 class="text-white text-uppercase mb-4 animated slideInDown"><i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street, New York, USA</h4>
+                            <h4 class="text-white text-uppercase mb-4 animated slideInDown"><i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890</h4-->
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img class="w-100" style="max-height:55rem" src="./img/disco.jpg" alt="Image">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center text-start">
+                        <div class="mx-sm-5 px-5" style="max-width: 900px;">
+                            <h1 class="display-2  text-uppercase mb-4 animated slideInDown neon"
+                                style="  animation-delay: 0.3s;animation-name: fadeInUpBig;font-family: MontHeavy; text-align: center;">MAS QUE UN NFT</h1>
                             <!--h4 class="text-white text-uppercase mb-4 animated slideInDown"><i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street, New York, USA</h4>
                             <h4 class="text-white text-uppercase mb-4 animated slideInDown"><i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890</h4-->
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
     </div>
     <!-- Carousel End -->
-   
 
 
+    
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+    <div id="about" class="container-xxl py-5" style="min-height:50rem">
+        <div class="container mt-5 mb-5">
+            <div class="row g-5 mt-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.15s">
                     <div class="d-flex flex-column">
-                        <img class="img-fluid w-75 align-self-end" src="img/about.jpg" alt="">
-                        <div class="w-50 bg-secondary p-5" style="margin-top: -25%;">
-                            <h1 class="text-uppercase text-primary mb-3">10.000 NFT</h1>
+                        <img class="img-fluid w-75 align-self-end" style="border-radius: 25px;" src="img/NFT1.jpg"
+                            alt="">
+                        <div class="w-50 p-5"
+                            style="background:rgba(25, 28, 36,0.55);backdrop-filter: blur(10px);border-radius:  25px;margin-top: -25%;">
+                            <h1 class="text-uppercase neon mb-3">10.000 NFT</h1>
                             <h2 class="text-uppercase mb-0">PREMIUM</h2>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <p class="d-inline-block bg-secondary text-primary py-1 px-4">About Us</p>
-                    <h1 class="text-uppercase mb-4">More Than Just A NFT. Learn More About Us!</h1>
-                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
-                    <div class="row g-4">
+                    <h1 class="text-uppercase mb-4 neon">Esto es más que un NFT</h1>
+                    <p>Theclub333 es un club donde el acceso lo hacemos a través de un NFT, este club tiene un acceso
+                        limitado de 10.000NFT.
+                    <p class="mb-4">Cada poseedor de este NFT tiene acceso gratuitos a fiestas en villas,
+                        conferencias de tecnología y mucho más que puedes leer en <a href="#faq">FAQ</a> o en el grupo
+                        de DISCORD.</p>
+                    </p>
+                    <div class="row g-4 mt-2">
                         <div class="col-md-6">
-                            <h3 class="text-uppercase mb-3">Comunidad Discord</h3>
-                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.</p>
-                            <a href="https://discord.com/invite/xm2zwsqB" class="btn btn-primary rounded-1 py-2 px-lg-4 d-none d-lg-block">Unete Discord<i class="fa fa-arrow-right ms-3"></i></a>
+                            <h3 class="text-uppercase mb-3 neonSecondary">Discord</h3>
+                            <p class="mb-0">Únete a nuestra comunidad de discord donde podrás obtener más información de
+                                las fiestas, conferencias y beneficios.</p>
+                            <a href="" class="mt-5 btn rounded-0 py-2 px-lg-4 d-none d-lg-block"
+                                style="background-color:rgb(221, 220, 220);box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f6daa6, 0 0 25px #f6daa6;">Únete
+                                en Discord!<i class="fa fa-arrow-right ms-3"></i></a>
                         </div>
                         <div class="col-md-6">
-                            <h3 class="text-uppercase mb-3">1000+ clients</h3>
-                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.</p>
-                            <a href="" class="btn btn-primary rounded-1 py-2 px-lg-4 d-none d-lg-block">Conecta MetaMask<i class="fa fa-arrow-right ms-3"></i></a>
+                            <h3 class="  text-uppercase mb-3 neonSecondary"> Metamask!</h3>
+                            <p class="mb-0">Conecta Metask para poder mintear un NFT y conseguir todos sus beneficios
+                                como fiestas en residencias privadas.</p>
+                            <a href="" class="mt-5 btn rounded-0 py-2 px-lg-4 d-none d-lg-block"
+                                style="background-color:rgb(221, 220, 220);box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f6daa6, 0 0 25px #f6daa6;">Connect
+                                MetaMask<i class="fa fa-arrow-right ms-3"></i></a>
 
                         </div>
                     </div>
@@ -142,58 +202,57 @@
         </div>
     </div>
     <!-- About End -->
-   <!-- 1:1 aspect ratio -->
-   <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" style="min-width: -webkit-fill-available;" height ="400"src="./slider.html" allowfullscreen></iframe>
-    <iframe class="embed-responsive-item" style="min-width: -webkit-fill-available;" height ="400"src="https://oncyber.io/theclub333" allowfullscreen></iframe>
-  </div>
-
+    <!-- 1:1 aspect ratio -->
+    <!--div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" style="min-width: -webkit-fill-available;" height ="400"src="./slider.html" allowfullscreen></iframe-->
+    <div id="gallery" class="embed-responsive embed-responsive-16by9 ">
+        <iframe class="embed-responsive-item" style="min-width: -webkit-fill-available;" height="800"
+            src="https://oncyber.io/theclub333" allowfullscreen></iframe>
+    </div>
 
     <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
+    <div id="service" class="container-xxl py-5" style="padding-top: 6rem !important;" allowfullscreen>
+        <div class="container mt-5 mb-5">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="d-inline-block bg-secondary text-primary py-1 px-4">Services</p>
-                <h1 class="text-uppercase">What We Provide</h1>
+                <h1 class="text-uppercase neon ">Beneficios</h1>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
-                        <div class="bg-dark d-flex flex-shrink-0 align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                            <img class="img-fluid" src="img/haircut.png" alt="">
+            <div class="row mt-5 g-4">
+                <div class="  mt-5 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item position-relative overflow-hidden  d-flex h-100 p-5 ps-0">
+                        <div class="bg-dark d-flex flex-shrink-0 align-items-center justify-content-center"
+                            style="width: 60px; height: 60px;">
                         </div>
                         <div class="ps-4">
-                            <h3 class="text-uppercase mb-3">NFT</h3>
-                            <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam.</p>
-                            <span class="text-uppercase text-primary">From $15</span>
+                            <h3 class="text-uppercase mb-3 neonSecondary">Fiestas</h3>
+                            <p>Con la obtención de este NFT vas a tener acceso gratuitos fiestas privas en villas o en
+                                discotecas reconocías en España.
+                            </p>
                         </div>
-                        <a class="btn btn-square" href=""><i class="fa fa-plus text-primary"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
-                        <div class="bg-dark d-flex flex-shrink-0 align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                            <img class="img-fluid" src="img/beard-trim.png" alt="">
+                <div class=" mt-5 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item position-relative overflow-hidden  d-flex h-100 p-5 ps-0">
+                        <div class="bg-dark d-flex flex-shrink-0 align-items-center justify-content-center"
+                            style="width: 60px; height: 60px;">
                         </div>
                         <div class="ps-4">
-                            <h3 class="text-uppercase mb-3">NFT</h3>
-                            <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam.</p>
-                            <span class="text-uppercase text-primary">From $15</span>
+                            <h3 class="text-uppercase mb-3 neonSecondary">Conferencias</h3>
+                            <p>Al obtener el NFT tendrás acceso gratuito al evento físico organizado por Theclub333.
+                            </p>
                         </div>
-                        <a class="btn btn-square" href=""><i class="fa fa-plus text-primary"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item position-relative overflow-hidden bg-secondary d-flex h-100 p-5 ps-0">
-                        <div class="bg-dark d-flex flex-shrink-0 align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                            <img class="img-fluid" src="img/mans-shave.png" alt="">
+                <div class=" mt-5 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item position-relative overflow-hidden d-flex h-100 p-5 ps-0">
+                        <div class="bg-dark d-flex flex-shrink-0 align-items-center justify-content-center"
+                            style="width: 60px; height: 60px;">
                         </div>
                         <div class="ps-4">
-                            <h3 class="text-uppercase mb-3">NFT</h3>
-                            <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam.</p>
-                            <span class="text-uppercase text-primary">From $15</span>
+                            <h3 class="text-uppercase mb-3 neonSecondary">DEFI</h3>
+                            <p>Acceso anticipado y con múltiplos beneficios a la plataforma DeFi que está en
+                                construcción.
+                            </p>
                         </div>
-                        <a class="btn btn-square" href=""><i class="fa fa-plus text-primary"></i></a>
                     </div>
                 </div>
             </div>
@@ -201,316 +260,434 @@
     </div>
     <!-- Service End -->
 
-<!-- Roadmap -->
-<div class="timeline-container" id="roadmap" style="margin-top: 3rem;padding: 25px;">
-    <h1 class="project-name" style="padding-top: 4rem;margin-bottom: 2rem;">ROADMAP</h1>
-    <div id="timeline" style="margin:0px !important">
-
-
-        <div class="timeline-item">
-            <div class="timeline-icon success">
-                <i class="fa fa-star" aria-hidden="true"></i>
-            </div>
-            <div class="timeline-content">
-                <h2>Febrero 2022</h2>
-                <p>
-                    Web y redes sociales
-                </p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-icon success">
-                <i class="fa fa-star" aria-hidden="true"></i>
-            </div>
-            <div class="timeline-content right">
-                <h2>Marzo 2022</h2>
-                <p>
-                    Versión beta de plataforma web para CrowdFunding Crypto acabada y en funcionamiento.
-                </p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-icon success">
-                <i class="fa fa-star" aria-hidden="true"></i>
-            </div>
-            <div class="timeline-content">
-                <h2>Junio 2022</h2>
-                <p>
-                    Versión beta de plataforma web de MUSIC2U acabada y en funcionamiento.
-                </p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-icon success">
-                <i class="fa fa-star" aria-hidden="true"></i>
-            </div>
-            <div class="timeline-content right">
-                <h2>Agosto 2022</h2>
-                <p>
-                    Versión beta de la App MUSIC2U acabada y en funcionamiento.
-                </p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-icon success">
-                <i class="fa fa-star" aria-hidden="true"></i>
-            </div>
-            <div class="timeline-content ">
-                <h2>Septiembre 2022</h2>
-                <p>
-                    Característica de intercambio de moneda M2U acabada.
-                </p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-icon success">
-                <i class="fa fa-star" aria-hidden="true"></i>
-            </div>
-            <div class="timeline-content right">
-                <h2>Noviembre 2022</h2>
-                <p>
-                    Marketplace para NFTs de artistas acabado.
-                </p>
-            </div>
-        </div>
-
-        <div class="timeline-item right">
-            <div class="timeline-icon success">
-                <i class="fa fa-key" aria-hidden="true"></i>
-            </div>
-            <div class="timeline-content ">
-                <h2>Enero 2023</h2>
-                <p>
-                    Lanzamiento de App con características blockchain en funcionamiento.
-                </p>
-            </div>
-        </div>
-
-
-    </div>
-
-
-    <!-- Roadmap -->
-</div>
-<!-- Roadmap -->
-
-    <div class="faqs">
- 
-        <h2>Frequently Asked Questions</h2>
-       
-        <div class="accordion">
-          <div class="accordion-item">
-            <a>Cuando esta disponible la colección?</a>
-            <div class="content">
-              <p>En muy poco tiempo daremos una fecha! Nuestro equipo está acabando de perfeccionar hasta el último detalle antes de la fecha del Mint. Atentos a nuestro canal de  Discord!!</p>
-            </div>
-          </div>
-         
-          <div class="accordion-item">
-            <a>Cuantos NFT habrán?</a>
-            <div class="content">
-              <p>Se repartirán en 3 Fases, la colección se compone de 10.000NFT nunca mas se sacarán mas NFT de esta colección, se podrán comprar de segunda mano en Opean Sea.</p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <a>Beneficios de poseer un NFT</a>
-            <div class="content">
-              <p>El acceso exclusivo a  los diferentes proyectos creados por el club.***Fiestas en villas.
-                *Conferencias Blockchain.
-                Acceso a la DE-Fi en construccion.
-                Los poseedores el NFT tienen acceso al grupo privado de Discord
-               Los poseedores del los NFT recibirán de forma gratuita AIRDROP de token theclub333.
-               Acceso a la venta Exclusiva de sorteos y productos
-               Acceso a la Whitelist en futuras colecciones
-               Reuniones mensuales por diferentes ciudades del país con los miembros del Club
-               Acceso a conocer a artistas, creadores de contenido e inversores de reconocimiento internacional
-               **Mas información en grupo de Discord**
-                </p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <a> Con quien puedo hablar para la colaboración?</a>
-            <div class="content">
-              <p>En Theclub333 estamos abiertos siempre con la mente abierta,lluvia de idea o cualquier propuesta. Puedes ponerte en contacto en esta dirección de correo  hola@theclub333.com</p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <a>Como obtener el NFT?</a>
-            <div class="content">
-              <p>Muy sencillo, se compran atraves de MetaMask en la red de Polygon, para los menos experimentados a continuación de dejamos un vídeo de forma rápida te explica como depositar fondo a MetaMask y como hacer el MINT</p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <a>Que pasa con los NFT que no MINT?</a>
-            <div class="content">
-              <p>Daremos una fecha para la venta del MINT, los NFT que no se minten serán borrados.</p>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
+    <!-- Service Start -->
+    <div id="mint" class="container-xxl py-5" style="padding-top: 6rem !important;" allowfullscreen>
+        <div class="container mt-5 mb-5">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h1 class="text-uppercase">Meet Our Team</h1>
+                <h1 class="text-uppercase neon ">Mint</h1>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/about.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-secondary text-center p-4">
-                            <h5 class="text-uppercase">NAME</h5>
-                            <span class="text-primary">Designation</span>
-                        </div>
+            <div class="row mt-5 g-4" style="place-content: center;">
+
+                <div class="divMint mt-5 col-lg-4 col-md-6 wow fadeInUp " style="height: 600px;
+                text-align: center;
+                background: linear-gradient(rgba(100,100,100,.1), rgba(0,0,0,.1)), url('./img/skin.PNG');
+                background-repeat: no-repeat;
+  background-size: 200%;
+                padding: 25px;
+                box-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 15px, rgb(246, 218, 166) 0px 0px 20px, rgb(246, 218, 166) 0px 0px 25px;
+                visibility: visible;
+                display: flex;
+                animation-delay: 0.3s;
+                animation-name: fadeInUp;
+                place-content: space-between;border-radius: 20px;
+                flex-flow: column;" data-wow-delay="0.3s">
+                    <img class=" img-fluid w-90 align-self-center" style="border-radius: 50px;" id="imgMint"
+                        src="img/NFT3.jpg" alt="">
+                    <a href="#" id="connMetamask"
+                        style="font-size: larger;margin:15px;color: darkslategray;border:0px;background-color:rgb(221, 220, 220);box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f6daa6, 0 0 25px #f6daa6;"
+                        class=" my-5 btn btn-primary rounded-0 py-2 px-lg-4 d-lg-block font-weight-bold"> MINT <i
+                            class="fa-solid fa-lock-keyhole-open"></i></a>
+
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+        <!-- Roadmap -->
+        <div id="roadmap" class="timeline-container" id="roadmap" style="margin-top: 3rem;padding: 25px;">
+            <h1 class="project-name neon" style="padding-top: 4rem;margin-bottom: 2rem;">ROADMAP</h1>
+            <div id="timeline" style="margin:0px !important">
+
+
+                <div class="timeline-item">
+                    <div class="timeline-icon "
+                        style="background-color:rgb(221, 220, 220);box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f6daa6, 0 0 25px #f6daa6;">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h2>Lanzamiento Grupo de Disord comunidad.</h2>
+
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/about.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-secondary text-center p-4">
-                            <h5 class="text-uppercase">NAME</h5>
-                            <span class="text-primary">Designation</span>
-                        </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon "
+                        style="background-color:rgb(221, 220, 220);box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f6daa6, 0 0 25px #f6daa6;">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content right">
+                        <h2>Primer Lanzamiento.</h2>
+
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/about.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-secondary text-center p-4">
-                            <h5 class="text-uppercase">NAME</h5>
-                            <span class="text-primary">Designation</span>
-                        </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon "
+                        style="background-color:rgb(221, 220, 220);box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f6daa6, 0 0 25px #f6daa6;">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h2>Primera Fiesta. Regalar Token.</h2>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/about.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon "
+                        style="background-color:rgb(221, 220, 220);box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f6daa6, 0 0 25px #f6daa6;">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content right">
+                        <h2>Sorteo de Merch.</h2>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon "
+                        style="background-color:rgb(221, 220, 220);box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f6daa6, 0 0 25px #f6daa6;">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content ">
+
+                        <h2>
+                            Entre los los holder de “333” se repartirán token.
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon "
+                        style="background-color:rgb(221, 220, 220);box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f6daa6, 0 0 25px #f6daa6;">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content right">
+                        <h2>Tienda de Merch.</h2>
+
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-icon "
+                        style="background-color:rgb(221, 220, 220);box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f6daa6, 0 0 25px #f6daa6;">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content ">
+                        <h2>
+                            Empiezan los Eventos, Fiestas,quedas… </h2>
+                    </div>
+                </div>
+
+                <div class="timeline-item ">
+                    <div class="timeline-icon "
+                        style="background-color:rgb(221, 220, 220);box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f6daa6, 0 0 25px #f6daa6;">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content right">
+                        <h2>
+                            Tercer Lanzamiento.</h2>
+                    </div>
+                </div>
+
+
+                <div class="timeline-item right">
+                    <div class="timeline-icon "
+                        style="background-color:rgb(221, 220, 220);box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f6daa6, 0 0 25px #f6daa6;">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content ">
+                        <h2>
+                            Plataforma DEFI. </h2>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <!-- Roadmap -->
+        </div>
+        <!-- FAQ -->
+
+        <div id="faq" class="faqs wow fadeInUp" data-wow-delay="0.1s"allowfullscreen>
+
+            <h2 class="neon">FAQ</h2>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <a>Cuando esta disponible la colección?</a>
+                    <div class="content">
+                        <p>En muy poco tiempo daremos una fecha! Nuestro equipo está acabando de perfeccionar hasta el
+                            último detalle antes de la fecha del Mint. Atentos a nuestro canal de Discord!!</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <a>Cuantos NFT habrán?</a>
+                    <div class="content">
+                        <p>Se repartirán en 3 Fases, la colección se compone de 10.000NFT nunca mas se sacarán mas NFT
+                            de
+                            esta colección, se podrán comprar de segunda mano en Opean Sea.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <a>Beneficios de poseer un NFT</a>
+                    <div class="content">
+                        <ul>El acceso exclusivo a los diferentes proyectos creados por el club:
+                            <li>Fiestas en villas.</li>
+                            <li> Conferencias Blockchain.</li>
+                            <li> Acceso a la DE-Fi en construccion.</li>
+                            <li> Los poseedores el NFT tienen acceso al grupo privado de Discord
+                            <li>Los poseedores del los NFT recibirán de forma gratuita AIRDROP de token theclub333.</li>
+                            <li>Acceso a la venta Exclusiva de sorteos y productos</li>
+                            <li>Acceso a la Whitelist en futuras colecciones</li>
+                            <li>Reuniones mensuales por diferentes ciudades del país con los miembros del Club</li>
+                            <li>Acceso a conocer a artistas, creadores de contenido e inversores de reconocimiento
+                                internacional</li>
+                            Mas información en grupo de Discord
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <a> Con quien puedo hablar para la colaboración?</a>
+                    <div class="content">
+                        <p>En Theclub333 estamos abiertos siempre con la mente abierta,lluvia de idea o cualquier
+                            propuesta.
+                            Puedes ponerte en contacto en esta dirección de correo hola@theclub333.com</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <a>Como obtener el NFT?</a>
+                    <div class="content">
+                        <p>Muy sencillo, se compran atraves de MetaMask en la red de Polygon, para los menos
+                            experimentados
+                            a continuación de dejamos un vídeo de forma rápida te explica como depositar fondo a
+                            MetaMask y
+                            como hacer el MINT</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <a>Que pasa con los NFT que no MINT?</a>
+                    <div class="content">
+                        <p>Daremos una fecha para la venta del MINT, los NFT que no se minten serán borrados.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Team Start -->
+        <div id="team" class="container-xxl  mt-5 mb-5 py-5" allowfullscreen>
+
+            <div class="container mt-5 mb-5 ">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="text-uppercase neon mt-5 mb-5">NUESTRO EQUIPO</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item">
+                            <div class="team-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="img/NFT1.jpg" alt="">
+                                <div class="team-social">
+                                    <a class="btn btn-square" href="https://twitter.com/JuannietoMo"><i
+                                            class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square" href="https://www.instagram.com/juannieto___/"><i
+                                            class="fab fa-instagram"></i></a>
+
+                                </div>
+                            </div>
+                            <div class="bg-secondary text-center p-4">
+                                <h5 class="text-uppercase">Juan Nieto Founder.</h5>
+                                <span class="text-primary">Designation</span>
                             </div>
                         </div>
-                        <div class="bg-secondary text-center p-4">
-                            <h5 class="text-uppercase">NAME</h5>
-                            <span class="text-primary">Designation</span>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item">
+                            <div class="team-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="img/NFT2.jpg" alt="">
+                                <div class="team-social">
+                                    <a class="btn btn-square" href="https://www.instagram.com/manulago___/"><i
+                                            class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-secondary text-center p-4">
+                                <h5 class="text-uppercase">Manuel Lago Founder. </h5>
+                                <span class="text-primary">Designation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item">
+                            <div class="team-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="img/NFT3.jpg" alt="">
+                                <div class="team-social">
+
+                                    <a class="btn btn-square" alt="github" href="https://github.com/danielei9"><i
+                                            class="fab fa-github-square"></i></i></a>
+                                    <a class="btn btn-square" alt="linkedin"
+                                        href="https://www.linkedin.com/in/daniel-burruchaga"><i
+                                            class="fab fa-linkedin"></i></a>
+                                    <a class="btn btn-square" alt="instagram"
+                                        href="https://www.instagram.com/buchspro/?hl=es"><i
+                                            class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-secondary text-center p-4">
+                                <h5 class="text-uppercase">Daniel Burruchaga Sola</h5>
+                                <span class="text-primary">Desarrollador</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="team-item">
+                            <div class="team-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="img/NFT1.jpg" alt="">
+                                <div class="team-social">
+                                    <a class="btn btn-square" alt="instagram"
+                                        href=" https://www.instagram.com/zairaatencia/"><i
+                                            class="fab fa-instagram"></i></a>
+
+                                </div>
+                            </div>
+                            <div class="bg-secondary text-center p-4">
+                                <h5 class="text-uppercase">Zaira Atencia.
+                                </h5>
+                                <span class="text-primary">Diseñadora</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Team End -->
+        <!-- Team End -->
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-secondary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="text-uppercase mb-4">Get In Touch</h4>
-                    <div class="d-flex align-items-center mb-2">
-                        <div class="btn-square bg-dark flex-shrink-0 me-3">
-                            <span class="fa fa-map-marker-alt text-primary"></span>
+        <!-- Footer Start -->
+        <div class="container-fluid bg-secondary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-4 col-md-6">
+                        <h4 class="text-uppercase mb-4 neon">Contacto</h4>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="btn-square bg-dark flex-shrink-0 me-3">
+                                <span class="fa fa-map-marker-alt text-primary"></span>
+                            </div>
+                            <span>Valencia, Comunidad Valenciana</span>
                         </div>
-                        <span>Valencia, Comunidad Valenciana</span>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="btn-square bg-dark flex-shrink-0 me-3">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <span>+34 664813207</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="btn-square bg-dark flex-shrink-0 me-3">
+                                <span class="fa fa-envelope-open text-primary"></span>
+                            </div>
+                            <span>support@theclub333.com</span>
+                        </div>
                     </div>
-                    <div class="d-flex align-items-center mb-2">
-                        <div class="btn-square bg-dark flex-shrink-0 me-3">
-                            <span class="fa fa-phone-alt text-primary"></span>
-                        </div>
-                        <span>+012 345 67890</span>
+                    <div class="col-lg-4 col-md-6">
+                        <h4 class="text-uppercase mb-4 neon">Quick Links</h4>
+                        <a href="#home" class="btn btn-link">Home</a>
+                        <a href="#about" class="btn btn-link">Info</a>
+                        <a href="#gallery" class="btn btn-link">Galery</a>
+                        <a href="#service" class="btn btn-link">Service</a>
+                        <a href="#service" class="btn btn-link">Mint</a>
+                        <a href="#roadmap" class="btn btn-link">Roadmap</a>
+                        <a href="#faq" class="btn btn-link">FAQ</a>
+                        <a href="#team" class="btn btn-link">Team</a>
+
                     </div>
-                    <div class="d-flex align-items-center">
-                        <div class="btn-square bg-dark flex-shrink-0 me-3">
-                            <span class="fa fa-envelope-open text-primary"></span>
+                    <div class="col-lg-4 col-md-6">
+                        <h4 class="text-uppercase mb-4 neon">Newsletter</h4>
+                        <div class="position-relative mb-4">
+                            <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text"
+                                placeholder="Your email">
+
+                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+                                style="border: 0px;background-color:#ffb34f;">SignUp</button>
                         </div>
-                        <span>support@theclub333.com</span>
+                        <div class="d-flex pt-1 m-n1">
+                            <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i
+                                    class="fab fa-twitter"></i></a>
+                            <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i
+                                    class="fab fa-youtube"></i></a>
+                            <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="text-uppercase mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="text-uppercase mb-4">Newsletter</h4>
-                    <div class="position-relative mb-4">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                    <div class="d-flex pt-1 m-n1">
-                        <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="container">
+                <div class="copyright" style="background: none !important;">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">The Club 333</a>, All Right Reserved.
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            Diseñado por <a class="border-bottom">Daniel Burruchaga Sola</a>
+                            <br>Distribuido por: <a class="border-bottom" href="" target="_blank">Daniel Burruchaga
+                                Sola</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">The Club 333</a>, All Right Reserved.
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        Designed By <a class="border-bottom">Daniel Burruchaga Sola</a>
-                        <br>Distributed By: <a class="border-bottom" href="" target="_blank">Daniel Burruchaga Sola</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+        <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><span class="fa-solid fa-up text-primary"></span></a>
+        <!-- Back to Top -->
+        <a href="#" class="btn neon btn-lg-square back-to-top">
+           <i class="fa neon fa-arrow-down ms-3"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <script  src="js/faqs.js"></script>
-    <script  src="js/roadmap.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/web3/initWeb3.js"></script>
+        <script src="js/faqs.js"></script>
+        <script src="js/roadmap.js"></script>
+        <script src="js/imgMint.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+            integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+            crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            function recargar_imagen() {
+                /* Un elemento por imagen de fondo deseado */
+                var images = [], x = 1;
+                images[0] = "img/NFT1.jpg";
+                images[1] = "img/NFT2.jpg";
+                images[2] = "img/NFT3.jpg";
+                /* Cambio de imagen de fondo asegurando que no se repetirá el anterior */
+                do {
+                    indice = Math.floor(Math.random() * images.length);
+                } while (images.length > 0 && indice == anterior);
+                anterior = indice;
+                /* Cambio efectivo de la imagen de fondo */
+                document.getElementById("imgMint").src = images[indice];
+                console.log(indice)
+            }
+            /* Cambiamos el fondo de pantalla cuando todo haya sido descargado */
+            var indice, anterior = -1;
+            window.onload = function () {
+                var imagen = document.getElementById("imgMint");
+                recargar_imagen();
+            };
+
+            // Establecemos el temporizador a 5 segundos
+            timer = setInterval("recargar_imagen()", 500);
+
+
+        </script>
 
 </body>
 

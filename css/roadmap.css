@@ -42,7 +42,7 @@
     content: "";
     width: 3px;
     height: 100%;
-    background: #1C71A4;
+    background: #ffb34f;
     left: 50%;
     top: 0;
     position: absolute;
@@ -86,7 +86,7 @@
 
 #timeline .timeline-item .timeline-content {
     width: 45%;
-    background: #fff;
+    background: rgba(0, 0, 0, 0.0);
     padding: 20px;
     -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
@@ -106,7 +106,7 @@
 
 #timeline .timeline-item .timeline-content h2 {
     padding: 15px;
-    background: red;
+   /* background: rgba(0, 0, 0, 1);*/
     color: #fff;
     margin: -20px -20px 0 -20px;
     font-weight: 300;
@@ -129,9 +129,9 @@
     top: 20px;
     width: 0;
     height: 0;
-    border-top: 7px solid transparent;
+   /* border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;
-    border-left: 7px solid red;
+    border-left: 7px solid red;*/
 }
 
 #timeline .timeline-item .timeline-content.right {
