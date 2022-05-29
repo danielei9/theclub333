@@ -3,9 +3,16 @@ $(document).ready(function () {
     /**
      * Button MetaMask
      */
-    var buttonConnMetamask = $('#connMetamask');
+     var buttonConnMetamask = $('#connMetamask');
+     //If we click on button metamask
+     buttonConnMetamask.on('click', function () {
+         if (checkMetamaskInstall()) {
+             getAccount();
+         };
+     });
+     var buttonConnMetamask1 = $('#connMetamask1');
     //If we click on button metamask
-    buttonConnMetamask.on('click', function () {
+    buttonConnMetamask1.on('click', function () {
         if (checkMetamaskInstall()) {
             getAccount();
         };
