@@ -35,7 +35,9 @@ exports.new = function (req, res) {
     //sensor.createDate = Date.now;
     //console.log("CreatingSensor");
     //  sensor.activeDate = Date;
-    sensor.type = req.body.type;
+    sensor.name = req.body.name;
+    sensor.email = req.body.email;
+    sensor.description = req.body.description;
     sensor.address = req.body.address;
     // save the sensor and check for errors
     sensor.save(function (err) {
