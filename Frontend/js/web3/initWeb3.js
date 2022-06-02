@@ -4,15 +4,24 @@ $(document).ready(function () {
      * Button MetaMask
      */
      var buttonConnMetamask = $('#connMetamask');
+     
      //If we click on button metamask
      buttonConnMetamask.on('click', function () {
          if (checkMetamaskInstall()) {
              getAccount();
          };
      });
-     var buttonConnMetamask1 = $('#connMetamask1');
+     var buttonConnMetamask1 = $('#connMetamaskB');
     //If we click on button metamask
     buttonConnMetamask1.on('click', function () {
+        if (checkMetamaskInstall()) {
+            getAccount();
+        };
+    });
+    
+    var buttonConnMetamaskC = $('#connMetamaskB');
+    //If we click on button metamask
+    buttonConnMetamaskC.on('click', function () {
         if (checkMetamaskInstall()) {
             getAccount();
         };
